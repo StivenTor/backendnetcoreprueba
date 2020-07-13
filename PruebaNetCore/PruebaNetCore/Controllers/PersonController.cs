@@ -59,7 +59,7 @@ namespace PruebaNetCore.Controllers
         }
 
 
-        /* Metodo para guardar a la persona */
+        /* Metodo para eliminar a la persona */
         [HttpPost]
         [Route("deletePerson")]
         [AllowAnonymous]
@@ -81,7 +81,7 @@ namespace PruebaNetCore.Controllers
 
 
 
-        /* Metodo para guardar a la persona */
+        /* Metodo para modificar a la persona */
         [HttpPost]
         [Route("updatePerson")]
         [AllowAnonymous]
