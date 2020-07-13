@@ -25,6 +25,7 @@ namespace PruebaNetCore.Controllers
         /* Metodo para consultaar las personas */
         [HttpGet]
         [Route("getPersons")]
+        [AllowAnonymous]
         public ActionResult<IEnumerable<string>> getPersons()
         {
             try
@@ -42,7 +43,7 @@ namespace PruebaNetCore.Controllers
         [HttpPost]
         [Route("savePerson")]
         [AllowAnonymous]
-        public IActionResult savePerson([FromForm] Person person)
+        public IActionResult savePerson([FromBody] Person person)
         {
             try
             {
@@ -63,7 +64,7 @@ namespace PruebaNetCore.Controllers
         [HttpPost]
         [Route("deletePerson")]
         [AllowAnonymous]
-        public IActionResult deletePerson([FromForm] Person person)
+        public IActionResult deletePerson([FromBody] Person person)
         {
             try
             {
@@ -85,7 +86,7 @@ namespace PruebaNetCore.Controllers
         [HttpPost]
         [Route("updatePerson")]
         [AllowAnonymous]
-        public IActionResult updatePerson([FromForm] Person person)
+        public IActionResult updatePerson([FromBody] Person person)
         {
             try
             {
